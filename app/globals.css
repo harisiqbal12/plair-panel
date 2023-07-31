@@ -13,6 +13,7 @@
 body {
   overflow-y: hidden !important;
   font-family: "Red Hat Display", sans-serif;
+  overflow-x: hidden !important;
 }
 
 .side-bar-gradient {
@@ -22,4 +23,8 @@ body {
     rgba(249, 249, 249, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
+}
+
+.hidescrollbar::-webkit-scrollbar {
+  display: none;
 }

@@ -2,26 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&display=swap");
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .link-style {
+    @apply cursor-pointer hover:text-primary duration-100 transition;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  overflow-y: hidden !important;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.side-bar-gradient {
+  background: rgb(249, 249, 249);
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    0deg,
+    rgba(249, 249, 249, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }

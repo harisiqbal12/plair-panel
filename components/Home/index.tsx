@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { Heading, ProjectCardLoader } from '@ui';
+import { Heading, ProjectCardLoader, ButtonPrimary } from '@ui';
 import PrimarySectionLoader from './PrimarySectionLoader';
 
 const PrimarySection = dynamic(() => import('./PrimarySection'), {
@@ -14,6 +14,15 @@ const ProjectCard = dynamic(() => import('@/components/Ui/Cards/ProjectCards'), 
 const QuotesCard = dynamic(() => import('@/components/Ui/Cards/QuotesCard'), {
 	ssr: false,
 	loading: () => <ProjectCardLoader />,
+});
+
+const DrafCard = dynamic(() => import('@/components/Ui/Cards/DraftCard'), {
+	ssr: false,
+	loading: () => <ProjectCardLoader />,
+});
+
+const Table = dynamic(() => import('@/components/Ui/Tables/Primary'), {
+	ssr: false,
 });
 
 export default function Home(): JSX.Element {
@@ -35,6 +44,18 @@ export default function Home(): JSX.Element {
 					<QuotesCard />
 					<QuotesCard />
 				</div>
+			</div>
+			<div className='w-full flex flex-col gap-10'>
+				<Heading title='Contract Drafts' />
+				<div className='w-full flex items-center gap-4 justify-between'>
+					<DrafCard />
+					<DrafCard />
+					<DrafCard />
+				</div>
+			</div>
+			<div className='w-full flex flex-col gap-10'>
+				<Heading title='Pending Timecard Requests' />
+				<Table />
 			</div>
 		</div>
 	);

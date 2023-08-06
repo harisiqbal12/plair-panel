@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FiBell } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaUserCircle } from "react-icons/fa";

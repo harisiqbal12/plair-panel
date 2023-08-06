@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { AppProvider } from "@components";
 
 export const metadata: Metadata = {
-  title: "Plair | Admin",
+  title: "Admin | Plair Panel",
   description: "Admin control management",
 };
 

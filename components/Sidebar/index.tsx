@@ -26,7 +26,7 @@ export default function Sidebar(): JSX.Element {
 
         <div className="flex flex-col gap-2 px-4">
           <Tab title="Dashboard" Icon={AiOutlineAppstore} />
-          <Tab title="User Manager" Icon={BiUserPin} />
+          <Tab slug="/user-manager"  title="User Manager" Icon={BiUserPin} />
           <Tab title="Quote Manager" Icon={RiMoneyDollarBoxLine} />
           <Tab title="Contract Manager" Icon={FaRegEdit} size={24} />
           <Tab title="Project Manager" Icon={FaTasks} />

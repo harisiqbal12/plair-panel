@@ -4,3 +4,4 @@ export * from './Button';
 export * from './Texts';
 export * from './Cards';
 export * from './Tables';
+export * from './Inputs';

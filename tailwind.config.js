@@ -11,7 +11,9 @@ module.exports = {
 				xss: '14px',
 				base: '15px',
 				sx: '16px',
+				md: "18px",
 				medium: '22px',
+				mediumSecondary: '26px',
 				large: '60px',
 			},
 			colors: {

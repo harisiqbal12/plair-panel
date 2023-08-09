@@ -1,7 +1,6 @@
 import { IoIosArrowDown } from 'react-icons/io';
 import { MdEdit } from 'react-icons/md';
 import { RiDeleteBin6Fill } from 'react-icons/ri';
-import { BsPlayFill } from 'react-icons/bs';
 import { BiSolidCopy } from 'react-icons/bi';
 import { FaUserCircle } from 'react-icons/fa';
 
@@ -406,7 +405,6 @@ export default function SecondaryTable(): JSX.Element {
 						</tbody>
 					</table>
 				</div>
-				
 			</div>
 		</div>
 	);

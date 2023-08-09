@@ -27,10 +27,10 @@ export default function Sidebar(): JSX.Element {
         <div className="flex flex-col gap-2 px-4">
           <Tab title="Dashboard" Icon={AiOutlineAppstore} />
           <Tab slug="/user-manager"  title="User Manager" Icon={BiUserPin} />
-          <Tab title="Quote Manager" Icon={RiMoneyDollarBoxLine} />
-          <Tab title="Contract Manager" Icon={FaRegEdit} size={24} />
-          <Tab title="Project Manager" Icon={FaTasks} />
-          <Tab title="Invoice Manager" Icon={LiaFileInvoiceSolid} />
+          <Tab slug="/quote-manager" title="Quote Manager" Icon={RiMoneyDollarBoxLine} />
+          <Tab slug="/contract-manager" title="Contract Manager" Icon={FaRegEdit} size={24} />
+          <Tab slug="/project-manager" title="Project Manager" Icon={FaTasks} />
+          <Tab slug="/invoice-manager" title="Invoice Manager" Icon={LiaFileInvoiceSolid} />
           <Tab title="Time Card" Icon={MdOutlineAccessTime} />
           <Tab title="Blog Manager" Icon={PiCardsBold} />
           <Tab title="Rules & Sections" Icon={PiShieldStar} />

@@ -7,14 +7,21 @@ import { BiAlarmExclamation } from 'react-icons/bi';
 
 import type { ProjectCardsProps } from './types';
 
-export default function ProjectCards({ status }: ProjectCardsProps): JSX.Element {
+export default function ProjectCards({
+	status,
+	btnTitle = 'View Project',
+	...props
+}: ProjectCardsProps): JSX.Element {
 	const computedStatusClassName = useMemo(() => {
 		if (status === 'Awaiting Payment') return 'bg-primaryGreen';
 		if (status === 'Awaiting Clarification') return 'bg-primaryOrange';
 		if (status === 'Finding New Developer') return 'bg-primarySky';
+		if (status === 'Getting estimate') return 'bg-primarySky';
+		if (status === 'Reviewing quote') return 'bg-primaryOrange';
 	}, [status]);
 
 	return (
+		//@ts-ignore
 		<motion.div
 			initial={{
 				opacity: 0,
@@ -27,6 +34,7 @@ export default function ProjectCards({ status }: ProjectCardsProps): JSX.Element
 			transition={{
 				type: 'keyframes',
 			}}
+			{...props}
 			className='w-[40%] bg-white shadow-custom h-[20rem] rounded-lg flex flex-col p-4 justify-between duration-150 '>
 			<div className='w-full flex items-start justify-between'>
 				<div className='flex flex-col'>
@@ -56,11 +64,10 @@ export default function ProjectCards({ status }: ProjectCardsProps): JSX.Element
 			</div>
 			<div className='w-full flex items-center justify-between gap-6'>
 				<ButtonPrimary
-					title='View Project'
+					title={btnTitle}
 					Icon={AiOutlineEye}
 					style={{
 						height: '40px',
-						width: '40%',
 						fontSize: '12px',
 					}}
 					color='btn-style-orange'

@@ -6,7 +6,7 @@ export default function Button({
 	Icon,
 	...props
 }: PrimaryButtonProps): JSX.Element {
-	const classname = `p-4  flex items-center gap-2 rounded-lg text-white font-semibold text-base justify-center transition duration-150 ${color}`;
+	const classname = `p-4  flex items-center gap-2 rounded-lg text-white font-semibold text-xs justify-center transition duration-150 ${color}`;
 
 	return (
 		<button {...props} className={classname}>
